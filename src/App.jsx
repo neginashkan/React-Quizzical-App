@@ -6,6 +6,7 @@ import axios from "axios";
 
 // -------------------------------------------------------------
 import Intro from "./Components/Intro"
+import Quiz from "./Components/Quiz";
 // -------------------------------------------------------------
 
 
@@ -13,8 +14,9 @@ import './CSS/styles.css'
 function App() {
   return (
     <div className="App">
+      <Quiz/>
     </div>
-  )
+  );
 }
 
 export default App

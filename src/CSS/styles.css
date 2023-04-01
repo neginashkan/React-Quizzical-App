@@ -7,10 +7,10 @@
   --wrong-box-color: #f8bcbc;
   --correct-box-color: #94d7a2;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: var(--background-color);
@@ -18,15 +18,17 @@ body {
   font-family: var(--questions-title-font);
   font-style: normal;
 }
+
+/* --------------------App component css----------------------------- */
 .App {
-    max-width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../Images/1.png"),url("../Images/2.png");
-  background-repeat: no-repeat,no-repeat;
-  background-position: right top,left bottom;
+    background-image: url("../Images/1.png"), url("../Images/2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;
+}
+
+/* --------------------Intro component css----------------------------- */
+.Intro {
+  padding-top: 12em;
 }
 .title {
   font-weight: 700;
@@ -40,17 +42,17 @@ body {
 }
 .title,
 .subtitle,
-.settings-button {
+.settings-button ,.start--check-answer-button{
   text-align: center;
 }
-.settings-button {
+.settings-button ,.start--check-answer-button{
   outline: none;
   color: var(--background-color);
   font-family: "Inter";
   font-weight: 500;
   padding: 1em 1.75em;
-  background-color: #4D5B9E;
-  border: 1px solid #4D5B9E;
+  background-color: #4d5b9e;
+  border: 1px solid #4d5b9e;
   display: block;
   margin: 0 auto;
   border-radius: 15px;
@@ -58,14 +60,17 @@ body {
   max-width: 200px;
   width: 100%;
   cursor: pointer;
-  transition:all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.settings-button:hover,.settings-button:focus{
-    background-color: var(--background-color);
-    color: #4D5B9E;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.settings-button:hover,
+.settings-button:focus,
+.start--check-answer-button:hover,
+.start--check-answer-button:focus {
+  background-color: var(--background-color);
+  color: #4d5b9e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .subtitle,
 .settings-button {
@@ -73,3 +78,60 @@ body {
   font-size: 1rem;
   line-height: 1.1875rem;
 }
+/* --------------------Question component css----------------------------- */
+.Question{
+    /* background-color: red; */
+    margin-bottom: 1em;
+    padding: 1.125em 0;
+    border-bottom: 1px solid #DBDEF0;
+}
+.options-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9em;
+}
+.question-title{
+    font-size: 15.36px;
+    font-weight: 700;
+    line-height: 23.04px;
+    margin-bottom: 0.8em;
+}
+.choice-button{
+    outline: none;
+    border: 1px solid var(--text-color);
+    color: inherit;
+    font-size: 0.72rem;
+    line-height: 1.08rem;
+    padding: 0.390em 0.90em;
+    text-align: center;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: 0.3s;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.choice-button:hover,.choice-button:focus{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.choice-button.checked{
+    background-color: var(--checked-choice-box-color);
+    border: none;
+}
+/* --------------------Quiz component css----------------------------- */
+.Quiz{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+}
+
+.all-questions-container{
+    margin-bottom: 0.5em;
+}
+.start--check-answer-button{
+    margin-bottom: 3em;
+}
+/* --------------------Answers component css----------------------------- */
