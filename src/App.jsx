@@ -7,6 +7,8 @@ import axios from "axios";
 // -------------------------------------------------------------
 import Intro from "./Components/Intro"
 import Quiz from "./Components/Quiz";
+import Error from "./Components/Error"
+import Settings from "./Components/Settings";
 // -------------------------------------------------------------
 
 
@@ -14,7 +16,7 @@ import './CSS/styles.css'
 function App() {
   return (
     <div className="App">
-      <Quiz/>
+      <Settings/>
     </div>
   );
 }

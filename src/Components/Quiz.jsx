@@ -15,7 +15,9 @@ function Quiz() {
       <button className="start--check-answer-button">
         Start quiz / Check answers
       </button>
+      
       <Answers />
+
     </div>
   );
 }
