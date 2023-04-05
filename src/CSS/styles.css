@@ -26,11 +26,13 @@ body {
 }
 
 /* --------------------App component css----------------------------- */
-/* .App {
-} */
+.App {
+  height: auto;
+}
 
 /* --------------------Intro component css----------------------------- */
 .Intro {
+  height: 100vh;
   padding-top: 12em;
 }
 .title {
@@ -139,6 +141,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: auto;
 }
 
 .all-questions-container {
@@ -332,7 +335,8 @@ cursor: pointer;
   background: #D6DBF5
 }
 
-/* @media (max-width:300px) {
+@media (max-width:300px) {
   :root{
+    font-size:10px
   }
-} */
+}

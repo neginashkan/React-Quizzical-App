@@ -1,21 +1,18 @@
-function Question() {
+function Question({ title, choices, handleAriaPressedClick}) {
+  const options = choices.map((option) => {
+    return (
+      <button
+        onClick={() => (handleAriaPressedClick(option.id))}
+        className={`choice-button ${option.ariaPressed && "checked"}`}
+      >
+        {option.name}
+      </button>
+    );
+  });
   return (
     <div className="Question">
-      <h3 className="question-title">Category</h3>
-      <div className="options-container">
-        {/* #TODO:
-            [map over and cereate buttons and ad here] */}
-        <button className="choice-button checked">Any Category</button>
-        <button className="choice-button">General Knowledge</button>
-        <button className="choice-button">Entertainment: Books</button>
-        <button className="choice-button">Entertainment: Music</button>
-        <button className="choice-button">Entertainment: Film</button>
-        <button className="choice-button">Entertainment: Film</button>
-        <button className="choice-button">Entertainment: Film</button>
-        <button className="choice-button">Entertainment: Film</button>
-        <button className="choice-button">Entertainment: Film</button>
-        <button className="choice-button">Entertainment: Film</button>
-      </div>
+      <h3 className="question-title">{title}</h3>
+      <div className="options-container">{options}</div>
     </div>
   );
 }
